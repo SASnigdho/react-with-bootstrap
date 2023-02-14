@@ -21,9 +21,11 @@ class Movies extends Component {
   };
 
   render() {
+    if (this.state.movies.length === 0) return <h1>No movie found!</h1>;
+
     return (
       <React.Fragment>
-        <h1>{this.getValue()}</h1>
+        <p>{this.getValue()}</p>
 
         <table className="table">
           <thead>
