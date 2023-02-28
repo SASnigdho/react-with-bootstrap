@@ -11,8 +11,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className="text-success">Counter!</h1>
+      <div className="mt-1">
         <span className="text-success pr-3">{this.state.count}</span>
 
         <button
