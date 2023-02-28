@@ -2,17 +2,19 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    value: this.props.value,
   };
 
   increment = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ value: this.state.value + 1 });
   };
 
   render() {
     return (
-      <div className="mt-1">
-        <span className="text-success pr-3">{this.state.count}</span>
+      <div className="mt-2">
+        <span className="text-success pr-3">
+          {this.state.value === 0 ? "Zero" : this.state.value}
+        </span>
 
         <button
           onClick={this.increment}
