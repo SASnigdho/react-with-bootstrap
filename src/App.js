@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Movies from './components/movies';
+import React from "react";
 import Counters from './components/counters';
+import Navbar from './components/navbar';
 
 function App() {
   return (
-    <main className='container'>
-      {/* <Movies /> */}
-      <Counters />
-    </main>
+    <React.Fragment>
+      <Navbar />
+
+      <main className='container'>
+        <Counters />
+      </main>
+    </React.Fragment>
   );
 }
 
