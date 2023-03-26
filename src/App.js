@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
-import Counters from './components/counters';
 import Navbar from './components/navbar';
+import Movies from './components/movies';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
 
       <main className='container'>
-        <Counters />
+        <Movies />
       </main>
     </React.Fragment>
   );
