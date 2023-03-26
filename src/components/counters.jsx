@@ -22,8 +22,12 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
-  handelDelete = (id) => {
-    console.log(`On Delete called! ${id}`);
+  handelDelete = (count) => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(count);
+    counters.splice(index, 1);
+
+    this.setState({ counters });
   };
 
   render() {
@@ -34,7 +38,7 @@ class Counters extends Component {
             key={count.id}
             count={count}
             onIncrement={() => this.handelincrement(count)}
-            onDelete={() => this.handelDelete(count.id)}
+            onDelete={() => this.handelDelete(count)}
           />
         ))}
       </div>
