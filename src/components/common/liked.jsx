@@ -4,7 +4,12 @@ const Liked = (props) => {
   const liked = props.liked === true ? "Yes" : "No";
 
   return (
-    <i class="fa fa-heart" aria-hidden="true">
+    <i
+      onClick={props.onLiked}
+      className="fa fa-heart"
+      aria-hidden="true"
+      style={{ cursor: "pointer" }}
+    >
       {liked}
     </i>
   );
