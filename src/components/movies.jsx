@@ -1,11 +1,13 @@
+import Liked from "./common/liked";
 import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
-import Liked from "./common/liked";
+import Pagination from "./common/pagination";
 
 class Movies extends Component {
   state = {
     count: 0,
     movies: getMovies(),
+    pageSize: 4,
   };
 
   getValue() {
@@ -76,6 +78,11 @@ class Movies extends Component {
             ))}
           </tbody>
         </table>
+
+        <Pagination
+          itemCount={this.state.count}
+          pageSize={this.state.pageSize}
+        />
       </React.Fragment>
     );
   }
